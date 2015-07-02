@@ -18,7 +18,7 @@ setup(
     include_package_data=True,
     platform='any',
     classifiers=[
-        'Development Status :: 1 - Beta',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers'
     ]
 )
