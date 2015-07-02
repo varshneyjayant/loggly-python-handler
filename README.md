@@ -1,6 +1,8 @@
 Python Logging Loggly Handler
 -----------------------------
 
+[![Build Status](https://travis-ci.org/psquickitjayant/loggly-python-handler.png?branch=master)](https://travis-ci.org/psquickitjayant/loggly-python-handler) [![Coverage Status](https://coveralls.io/repos/psquickitjayant/loggly-python-handler/badge.svg)](https://coveralls.io/r/psquickitjayant/loggly-python-handler)
+
 A simple Python logging Loggly handler that can be used to send to a Loggly Gen2 https endpoint. Borrowed the extra fields concept from the graypy logging library. Check out Loggly's [Python logging documentation](https://www.loggly.com/docs/python-http/) to learn more.
 
 ## Installation
