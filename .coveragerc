@@ -1,0 +1,18 @@
+[run]
+omit =
+    */python?.?/*
+    */lib-python/?.?/*.py
+    */lib_pypy/_*.py
+    */site-packages/ordereddict.py
+    */site-packages/nose/*
+    */unittest2/*
+
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+
+[report]
+
+exclude_lines = 
+    pragma: no cover
+    if __name__ == '__main__':
