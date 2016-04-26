@@ -4,7 +4,6 @@ import socket
 import traceback
 from datetime import datetime
 import json
-import dateutil.parser as parser
 import time
 import pytz
 from tzlocal import get_localzone
