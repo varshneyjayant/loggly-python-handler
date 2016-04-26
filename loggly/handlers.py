@@ -18,7 +18,7 @@ def bg_cb(sess, resp):
     """ Don't do anything with the response """
     pass
 
-def get_utc_date(local_date)
+def get_utc_date(local_date):
     datefrmt = datetime.strptime(str(date),'%Y-%m-%d %H:%M:%S,%f')
     tz = get_localzone()
     local_dt = tz.localize(datefrmt, is_dst=None)
