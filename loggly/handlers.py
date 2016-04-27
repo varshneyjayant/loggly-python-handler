@@ -59,8 +59,6 @@ class HTTPSHandler(logging.Handler):
             payload = self.format(record)
             if is_json(payload):
                 payload = format_timestamp(payload)
-            else:
-                payload = payload
             session.post(self.url, data=payload, background_callback=bg_cb)
         except (KeyboardInterrupt, SystemExit):
             raise
