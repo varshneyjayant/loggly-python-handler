@@ -80,7 +80,7 @@ class TestLogglyHandler(unittest.TestCase):
         """ it should raise the interrupt """
         handler = self.handler
         handler.format = Mock()
-
+        handler.emit(self.record)
         self.session.post.side_effect = KeyboardInterrupt('Boom!')
 
         self.assertRaises(KeyboardInterrupt, handler.emit, self.record)
