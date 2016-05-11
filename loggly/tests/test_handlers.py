@@ -89,6 +89,7 @@ class TestLogglyHandler(unittest.TestCase):
         """ it should raise the exit """
         handler = self.handler
         handler.format = Mock()
+        handler.emit(self.record)
 
         self.session.post.side_effect = SystemExit('Boom!')
 
@@ -99,6 +100,7 @@ class TestLogglyHandler(unittest.TestCase):
         handler = self.handler
         handler.format = Mock()
         handler.handleError = Mock()
+        handler.emit(self.record)
 
         self.session.post.side_effect = Exception('Boom!')
 
