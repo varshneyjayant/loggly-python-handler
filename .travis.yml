@@ -5,6 +5,7 @@ python:
 install:
   - "pip install -r requirements.txt --use-mirrors"
   - pip install coveralls --use-mirrors
+  - pip install pytz
 # command to run tests
 script:
   - "nosetests --with-coverage --cover-erase --cover-branches --cover-package=loggly"
