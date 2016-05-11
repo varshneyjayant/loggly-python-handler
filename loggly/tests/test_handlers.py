@@ -70,7 +70,7 @@ class TestLogglyHandler(unittest.TestCase):
         handler.format.return_value = 'msg'
 
         handler.emit(self.record)
-        self.is_json.assert_called_once_with(self.record)
+        
         handler.format.assert_called_once_with(self.record)
 
         self.session.post.assert_called_once_with(
@@ -89,7 +89,7 @@ class TestLogglyHandler(unittest.TestCase):
         """ it should raise the exit """
         handler = self.handler
         handler.format = Mock()
-
+        self.is_json.assert_called_once_with(self.record)
         self.session.post.side_effect = SystemExit('Boom!')
 
         self.assertRaises(SystemExit, handler.emit, self.record)
